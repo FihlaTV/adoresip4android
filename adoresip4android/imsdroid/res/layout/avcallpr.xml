@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_height="wrap_content" android:layout_width="wrap_content">
+    <TextView android:id="@+id/view_call_trying_textView_info" android:layout_height="wrap_content" 
+          android:text="Calling....." 
+          android:textColor="@color/color_white" 
+          android:gravity="center" 
+          android:layout_marginLeft="5px"
+          android:layout_width="wrap_content"
+          android:textSize="30dp"></TextView>
+    <ImageView  android:id="@+id/view_call_trying_imageView_avatar" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+            android:src="@drawable/calling_image" 
+            android:layout_below="@id/view_call_trying_textView_info"
+            android:layout_marginRight="2px" 
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"></ImageView>
+            
+    <TextView android:layout_height="wrap_content" android:layout_alignLeft="@+id/sview_call_trying_imageView_avatar" android:text="John Doe" android:id="@+id/view_call_trying_textView_remote" android:textStyle="bold" android:textColor="@color/color_white" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_below="@+id/view_call_trying_imageView_avatar" android:layout_alignRight="@+id/view_call_trying_imageView_avatar" android:textSize="25dp" android:layout_marginBottom="6px" android:layout_marginLeft="6px" android:layout_marginRight="6px" android:layout_marginTop="10px"></TextView>
+    <LinearLayout  android:layout_width="fill_parent" android:id="@+id/view_call_trying_linearLayout_pick_or_hang" android:layout_below="@+id/view_call_trying_textView_remote" android:gravity="center_horizontal" android:weightSum="10" android:layout_height="wrap_content" android:layout_marginBottom="3px" android:layout_marginLeft="3px" android:layout_marginRight="3px" android:layout_marginTop="10px">
+    
+   
+<!--<Button android:id="@+id/view_call_trying_imageButton_hang"
+        style="@style/CallButton"
+        android:layout_below="@+id/ricvcall"
+        android:layout_height="70dip" 
+        android:text="Disconnect" 
+        android:layout_width="1dip"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_in_call_touch_end"
+		android:textColor="#FF6072" 
+        android:layout_margin="5px" >
+</Button>
+<ToggleButton 
+        android:id="@+id/holdcall" 
+        
+        android:layout_toRightOf="@+id/cancelcall"
+        android:layout_height="70dip" 
+        android:textOn="@string/string_hold"
+		android:textOff="@string/string_hold"
+        android:layout_width="1dip"
+		android:layout_weight="1"
+        android:layout_gravity="center" 
+        >
+
+</ToggleButton>
+
+<ToggleButton android:id="@+id/speakerButton" 
+              style="@style/CallButton"
+              android:layout_toRightOf="@+id/holdcall"  
+			  android:layout_width="1dip"
+			  android:layout_weight="1"
+			  android:layout_height="70dip" 
+			  android:textOn="@string/string_speaker_on"
+			  android:textOff="@string/string_speaker_off"
+			  android:layout_gravity="center"
+			  
+			   /> 
+ 			  
+
+
+        --><ImageButton android:text="Decline" android:id="@+id/view_call_trying_imageButton_hang"  style="@style/CallButton" android:layout_width="70px" android:layout_height="70px" android:layout_weight="3"  android:paddingLeft="5px" android:src="@drawable/phone_hang_up_48"></ImageButton>
+        <ImageButton android:text="Answer"  style="@style/CallButton" android:id="@+id/view_call_trying_imageButton_pick" android:layout_width="70px" android:layout_height="70px" android:layout_marginRight="5px" android:layout_weight="3"  android:src="@drawable/phone_pick_up_48"></ImageButton>
+        <ToggleButton android:text="Decline" android:textOn="@string/string_resume"
+			  android:textOff="@string/string_hold" style="@style/CallButton" android:layout_toRightOf="@+id/view_call_trying_imageButton_hang" android:id="@+id/view_call_trying_imageButton_hang12" android:layout_width="70px" android:layout_height="70px" android:layout_weight="3"  android:paddingLeft="5px" android:src="@drawable/phone_hang_up_48"></ToggleButton>
+        <!--<ImageButton android:text="Decline"  style="@style/CallButton" android:id="@+id/view_call_trying_imageButton_hang123" android:layout_toRightOf="@+id/view_call_trying_imageButton_hang12" android:layout_width="70px" android:layout_height="70px" android:layout_weight="3"  android:paddingLeft="5px" android:src="@drawable/phone_hang_up_48"></ImageButton>
+        <ImageButton android:text="Decline"  style="@style/CallButton" android:id="@+id/vijay4" android:layout_below="@+id/view_call_trying_imageButton_hang123" android:layout_width="70px" android:layout_height="70px" android:layout_weight="3"  android:paddingLeft="5px" android:src="@drawable/phone_hang_up_48"></ImageButton>
+        <ImageButton android:text="Decline"  style="@style/CallButton" android:id="@+id/vijay5" android:layout_toLeftOf="@+id/vijay4" android:layout_width="70px" android:layout_height="70px" android:layout_weight="3"  android:paddingLeft="5px" android:src="@drawable/phone_hang_up_48"></ImageButton>
+        <ImageButton android:text="Decline"  style="@style/CallButton" android:id="@+id/vijay6" android:layout_toLeftOf="@+id/vijay5" android:layout_width="70px" android:layout_height="70px" android:layout_weight="3"  android:paddingLeft="5px" android:src="@drawable/phone_hang_up_48"></ImageButton>
+  --></LinearLayout>
+  <LinearLayout  android:layout_width="fill_parent" android:id="@+id/view_call_trying_linearLayout_pick_or_hang1" android:layout_below="@+id/view_call_trying_linearLayout_pick_or_hang" android:gravity="center_horizontal" android:weightSum="10" android:layout_height="wrap_content" android:layout_marginBottom="3px" android:layout_marginLeft="3px" android:layout_marginRight="3px" android:layout_marginTop="10px">
+    <ToggleButton  android:text="Decline" android:textOn="@string/string_speaker_on"
+		android:textOff="@string/string_speaker_off" style="@style/CallButton" android:id="@+id/view_call_trying_imageButton_hang123" android:layout_toRightOf="@+id/view_call_trying_imageButton_hang12" android:layout_width="70px" android:layout_height="70px" android:layout_weight="3"  android:paddingLeft="5px" android:src="@drawable/phone_hang_up_48"></ToggleButton> 
+        <ToggleButton android:text="Decline" android:textOn="@string/string_stop_video"
+			  android:textOff="@string/string_send_video" style="@style/CallButton" android:id="@+id/speakerbutton" android:layout_toRightOf="@+id/view_call_trying_imageButton_hang123" android:layout_width="70px" android:layout_height="70px" android:layout_weight="3"  android:paddingLeft="5px" android:src="@drawable/phone_hang_up_48"></ToggleButton>
+       
+    
+    
+    </LinearLayout>
+    <SlidingDrawer android:layout_width="fill_parent" android:layout_height="fill_parent" android:handle="@+id/handle" android:content="@+id/content" android:layout_below="@+id/sview_call_trying_imageView_avatar" android:layout_alignLeft="@+id/sview_call_trying_imageView_avatar" android:layout_alignRight="@+id/sview_call_trying_imageView_avatar" android:visibility="visible">
+        <Button android:layout_width="wrap_content"   android:id="@+id/handle" android:layout_height="wrap_content" android:text="Keyboard"></Button>
+        <LinearLayout android:id="@+id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        	<include android:id="@+id/view_call_trying_keyboard" layout="@layout/view_dialer_buttons" android:layout_weight="2" android:layout_margin="2px" android:layout_height="fill_parent" android:layout_width="fill_parent"/>
+        </LinearLayout>
+    </SlidingDrawer>
+
+
+</RelativeLayout>

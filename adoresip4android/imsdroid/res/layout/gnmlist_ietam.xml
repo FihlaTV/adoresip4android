@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:minHeight="?android:attr/listPreferredItemHeight"
+          android:gravity="center_vertical"
+          android:paddingRight="?android:attr/scrollbarSize"
+          android:orientation="vertical">
+    
+<ListView android:layout_width="fill_parent" 
+	      android:id="@android:id/list"
+		  android:layout_height="wrap_content" 
+		  android:layout_weight="1.0"
+		  android:divider="@drawable/list_divider"
+		  android:textSize="32sp" 
+		  android:paddingLeft="2dip">
+</ListView>
+	
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	      android:id="@+id/layoutgeneral"
+	      android:layout_height="70dip"
+	      android:gravity="left|center"
+	      android:layout_width="fill_parent" 
+	      android:paddingBottom="5px"
+	      android:paddingTop="5px"
+	      android:paddingLeft="5px" 
+	      android:background="@drawable/btn_dial_action"
+	      android:orientation="horizontal">
+	 
+<ImageView
+          android:id="@+id/settings_general"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="1dip"
+          android:src="@drawable/settings_general" />
+<TextView android:id="@+id/GeneralSettings" 
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content" 
+	      android:gravity="center"
+	      android:textColor="@color/color_white" 
+	      android:text="General"
+	      android:textSize="28sp" 
+	      android:layout_marginTop="2dip"
+          android:layout_marginLeft="12dip" ></TextView>
+      
+</LinearLayout>
+       
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/layoutnetwork"
+	      android:layout_height="70dip" 
+	      android:gravity="left|center"
+	      android:layout_width="fill_parent" 
+	      android:paddingBottom="5px"
+	      android:paddingTop="5px" 
+	      android:paddingLeft="5px"
+	      android:background="@drawable/btn_dial_action"
+	      android:orientation="horizontal" >
+	
+<ImageView
+          android:id="@+id/setting_network"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="1dip"
+          android:src="@drawable/setting_network" />
+<TextView android:text="NetWork" 
+	      android:id="@+id/NewtorkSettings"
+	      android:layout_width="wrap_content" 
+	      android:layout_height="wrap_content"
+	      android:textColor="@color/color_white"
+	      android:textSize="28sp"
+          android:layout_marginTop="2dip" 
+          android:layout_marginLeft="12dip"
+          android:src="@drawable/setting_network"></TextView>
+     
+</LinearLayout>
+     
+     
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/layoutmedia"
+	      android:layout_height="70dip" 
+	      android:gravity="left|center"
+	      android:layout_width="fill_parent" 
+	      android:paddingBottom="5px"
+	      android:paddingTop="5px" 
+	      android:paddingLeft="5px" 
+	      android:background="@drawable/btn_dial_action"
+	      android:orientation="horizontal" >
+	 
+<ImageView
+          android:id="@+id/settings_media"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="1dip"
+          android:src="@drawable/settings_media" />
+<TextView android:text="Media" 
+	      android:id="@+id/MediaSettings"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:textColor="@color/color_white"
+	      android:textSize="28sp"
+          android:layout_marginTop="2dip"
+          android:layout_marginLeft="12dip"
+          android:src="@drawable/settings_media"></TextView>
+</LinearLayout>
+	
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/layoutmiscellaneous"
+	      android:layout_height="70dip" 
+	      android:gravity="left|center"
+	      android:layout_width="fill_parent" 
+	      android:paddingBottom="5px"
+	      android:paddingTop="5px" 
+	      android:paddingLeft="5px" 
+	      android:background="@drawable/btn_dial_action"
+	      android:orientation="horizontal" >
+	 
+<ImageView
+          android:id="@+id/settings_miscellaneous"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="1dip"
+          android:src="@drawable/settings_miscellaneous" />
+<TextView android:text="Miscellaneous" 
+	      android:id="@+id/miscellaneousSettings"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:textColor="@color/color_white"
+	      android:textSize="28sp"
+          android:layout_marginTop="2dip"
+          android:layout_marginLeft="12dip"
+          android:src="@drawable/settings_miscellaneous"></TextView>
+</LinearLayout>
+		
+	
+</LinearLayout>

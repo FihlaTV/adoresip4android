@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent"   android:focusable="false">
+<GridView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screen_home_gridview" 
+android:layout_width="fill_parent" android:numColumns="2" android:listSelector="#00000000"
+android:gravity="fill_vertical|fill_horizontal" android:isScrollContainer="false" 
+android:scrollbars="none"  android:smoothScrollbar="false" android:paddingTop="230dp" 
+android:columnWidth="50dp" android:layout_height="wrap_content" android:drawSelectorOnTop="false"
+android:stretchMode="columnWidth" android:background="@color/color_black" android:scrollbarDefaultDelayBeforeFade="0">
+</GridView>
+
+<ImageView android:id="@+id/ImageView" android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" android:layout_marginRight="10dip" 
+	android:layout_marginLeft="60dip" android:src="@drawable/adore"/> 
+	
+	<TextView android:id="@+id/siplabel" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@id/ImageView"
+		 android:padding="20dip" android:text="Sip " />
+
+	<EditText android:id="@+id/SipText" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:maxLines="1"
+		android:background="@android:drawable/editbox_background"
+		android:layout_toRightOf="@id/siplabel" android:layout_alignBaseline="@id/siplabel"
+		android:text="" android:layout_marginRight="5dip" android:layout_marginLeft="45dip"/>
+
+	<TextView android:id="@+id/Userlabel" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@id/siplabel"
+		 android:padding="20dip" android:text="User Name" />
+
+	<EditText android:id="@+id/UserText" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="@android:drawable/editbox_background"
+		android:maxLines="1" android:layout_toRightOf="@id/Userlabel"
+		android:layout_alignBaseline="@id/Userlabel" 
+		android:layout_marginRight="5dip" android:text="" 
+		/>
+
+	<TextView android:id="@+id/password" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@id/Userlabel"
+		 android:padding="20dip" android:text="Password   " />
+		 
+   <EditText android:id="@+id/passText" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="@android:drawable/editbox_background"
+      android:maxLines="1" android:inputType="textPassword"
+		android:password="true" android:layout_toRightOf="@id/password"
+		android:layout_marginRight="5dip" android:layout_alignBaseline="@id/password" />
+
+	<Button android:id="@+id/clear_button" android:layout_height="60dip" android:layout_below="@id/password"
+		android:layout_marginLeft="200dip" 
+		android:padding="20dip" android:text="Clear" android:background="@drawable/btn_dial_action"
+		android:textColor="?android:attr/textColorSecondary"
+		
+		android:layout_width="wrap_content"/>
+		<Button android:id="@+id/login_button" android:layout_width="65dip"
+		android:layout_height="60dip" android:layout_toRightOf="@id/login_button"
+		android:layout_marginRight="10dip" android:layout_below="@id/password"
+		android:padding="15dip" android:text="Login" android:visibility="gone"
+		android:layout_marginLeft="90dip" android:background="@drawable/btn_dial_action"
+		android:textColor="?android:attr/textColorSecondary"/>
+	
+		
+		<CheckBox android:id="@+id/save_bt" 
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_marginRight="10dip" android:layout_marginLeft="155dip"
+		android:textSize="20sp" android:layout_below="@id/clear_button"
+		android:padding="10dip" android:textColor="?android:attr/textColorSecondary"
+		/>
+   
+   <TextView android:id="@+id/Beta" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@+id/save_bt"
+		 android:padding="20dip" android:textSize="32px" android:text="BETA" android:layout_marginLeft="115dip"/>
+		 
+     <ProgressBar android:indeterminate="true" style="?android:attr/progressBarStyleHorizontal"
+			android:layout_width="fill_parent" android:layout_height="20dip" android:id="@+id/dl_progressbar" 
+			android:layout_below="@id/clear_button" android:visibility="gone"></ProgressBar>
+	<TextView android:layout_height="fill_parent" android:layout_width="fill_parent"
+			android:gravity="center" android:id="@+id/dl_text" 
+			android:textAppearance="?android:attr/textAppearanceSmall"></TextView>
+</RelativeLayout>
