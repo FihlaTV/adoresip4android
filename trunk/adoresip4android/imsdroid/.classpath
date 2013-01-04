@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="src" path="newngnstact_src"/>
+	<classpathentry kind="src" path="ngnstack_src"/>
+	<classpathentry kind="src" path="vijay_ngn_src"/>
+	<classpathentry kind="src" path="NGN_Stack_src"/>
+	<classpathentry kind="src" path="org_doubango_ngn_src"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="lib" path="/android-ngn-stack/libs/simple-xml-2.3.4.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

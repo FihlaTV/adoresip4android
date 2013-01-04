@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="10px"
+	android:background="@drawable/minitab_indicator"
+	android:focusable="true" 
+	android:duplicateParentState="true"
+	android:gravity="center"> 
+	<ImageView android:layout_width="5px" android:layout_marginRight="0dip"
+		android:layout_height="18px" android:id="@+id/photo"></ImageView>
+	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:duplicateParentState="true"
+		android:id="@+id/name" style="@style/homeTabIndicatorText"/>
+</LinearLayout>

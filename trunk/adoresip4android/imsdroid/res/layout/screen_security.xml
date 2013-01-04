@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_gray" >
+
+    <org.doubango.imsdroid.MyViewFlipper
+        android:id="@+id/screen_av_flipperView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <!-- FRAMELAYOUT1 -->
+
+        <FrameLayout
+            android:id="@+id/screen_av_frameLayout_callscreen"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/screen_av_relativeLayout_top"
+                    android:layout_width="fill_parent"
+                    android:layout_height="17px"
+                    android:background="@color/color_gray" >
+
+                    <TextView
+                        android:id="@+id/screen_av_textView_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toRightOf="@+id/screen_av_imageView_state"
+                        android:text="....."
+                        android:textColor="@color/color_white"
+                        android:textSize="16px" >
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/screen_av_imageView_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/bullet_ball_glass_grey_16" >
+                    </ImageView>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/screen_av_linearLayout_video"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/screen_av_relativeLayout_top"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toLeftOf="@+id/screen_av_surfaceView_remote"
+                    android:orientation="vertical"
+                    android:weightSum="10" >
+
+                    <LinearLayout
+                        android:id="@+id/screen_av_linearLayout_video_remote"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="9"
+                        android:background="@drawable/black_qcif" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/screen_av_linearLayout_bottom"
+                        android:layout_width="fill_parent"
+                        android:layout_height="95px"
+                        android:layout_weight="0"
+                        android:weightSum="3" >
+
+                        <LinearLayout
+                            android:id="@+id/screen_av_linearLayout_video_local"
+                            android:layout_width="88px"
+                            android:layout_height="88px"
+                            android:background="@color/color_white"
+                            android:minHeight="88px"
+                            android:minWidth="88px" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="5px"
+                            android:layout_weight="3"
+                            android:background="@color/color_gray"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/screen_av_textView_remoteUri"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="middle"
+                                android:text="Alice"
+                                android:textColor="@color/color_white"
+                                android:textSize="25px"
+                                android:textStyle="bold" >
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/screen_av_textView_time"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/screen_av_textView_remoteUri"
+                                android:text="00:00"
+                                android:textColor="@color/color_violet"
+                                android:textSize="25px"
+                                android:textStyle="bold" >
+                            </TextView>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/screen_av_imageView_dialer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="2px"
+                            android:clickable="true"
+                            android:src="@drawable/dialertext_47" >
+                        </ImageView>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <!-- FRAMELAYOUT2 -->
+
+        <FrameLayout
+            android:id="@+id/screen_av_frameLayout_dialer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/color_black"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/color_black"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5px"
+                    android:gravity="center"
+                    android:weightSum="3" >
+
+                    <ImageButton
+                        android:id="@+id/screen_av_imageButton_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5px"
+                        android:background="@color/color_black"
+                        android:src="@drawable/num1_76" >
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/screen_av_imageButton_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5px"
+                        android:background="@color/color_black"
+                        android:src="@drawable/num2_76" >
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/screen_av_imageButton_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5px"
+                        android:background="@color/color_black"
+                        android:src="@drawable/num3_76" >
+                    </ImageButton>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:id="@+id/screen_av_imageButton_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5px"
+                        android:background="@color/color_black"
+                        android:src="@drawable/num4_76" >
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/screen_av_imageButton_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5px"
+                        android:background="@color/color_black"
+                        android:src="@drawable/num5_76" >
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/screen_av_imageButton_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5px"
+                        android:background="@color/color_black"
+                        android:src="@drawable/num6_76" >
+                    </ImageButton>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:id="@+id/screen_av_imageButton_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5px"
+                        android:background="@color/color_black"
+                        android:src="@drawable/num7_76" >
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/screen_av_imageButton_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5px"
+                        android:background="@color/color_black"
+                        android:src="@drawable/num8_76" >
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/screen_av_imageButton_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5px"
+                        android:background="@color/color_black"
+                        android:src="@drawable/num9_76" >
+                    </ImageButton>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:id="@+id/screen_av_imageButton_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5px"
+                        android:background="@color/color_black"
+                        android:src="@drawable/start_76" >
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/screen_av_imageButton_0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5px"
+                        android:background="@color/color_black"
+                        android:src="@drawable/num0_76" >
+                    </ImageButton>
+
+                    <ImageButton
+                        android:id="@+id/screen_av_imageButton_sharp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5px"
+                        android:background="@color/color_black"
+                        android:src="@drawable/sharp_76" >
+                    </ImageButton>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/screen_av_button_back2call"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10px"
+                    android:text="Back to the Call Screen" >
+                </Button>
+            </LinearLayout>
+        </FrameLayout>
+    </org.doubango.imsdroid.MyViewFlipper>
+
+    <LinearLayout
+        android:id="@+id/screencal_av_linearLayout_video"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/screen_av_relativeLayout_top"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@+id/screen_av_surfaceView_remote"
+        android:orientation="vertical"
+        android:weightSum="10" >
+
+        <LinearLayout
+            android:id="@+id/calscreen_av_linearLayout_video_remote"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="9"
+            android:background="@drawable/black_qcif" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainButtonsContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="4dip"
+        android:paddingLeft="4dip"
+        android:paddingRight="4dip" >
+
+        <LinearLayout
+            android:id="@+id/bottomButtonsContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="4dip"
+            android:paddingLeft="4dip"
+            android:paddingRight="4dip" >
+
+            <TextView
+                android:id="@+id/update_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5px"
+                android:gravity="center"
+                android:text="Calling....."
+                android:textColor="@color/color_white"
+                android:textSize="30px" >
+            </TextView>
+
+            <ImageView
+                android:id="@+id/sharad_av_calling"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bottomButtonsContainer"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="2px"
+                android:src="@drawable/calling_image" >
+            </ImageView>
+
+            <Chronometer
+                android:id="@+id/elapsedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="right"
+                android:layout_marginBottom="19dip"
+                android:layout_marginLeft="-14dip"
+                android:layout_toRightOf="@+id/sharad_av_calling"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/numberinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dip"
+                android:layout_marginTop="10dip"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/color_white"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/justbottomButtonsContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bottomButtonsContainer"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/cancelcall"
+                style="@style/CallButton"
+                android:layout_width="1dip"
+                android:layout_height="70dip"
+                android:layout_below="@+id/ricvcall"
+                android:layout_gravity="center"
+                android:layout_margin="5px"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_in_call_touch_end"
+                android:text="Disconnect"
+                android:textColor="#FF6072" >
+            </Button>
+
+            <ToggleButton
+                android:id="@+id/holdcall"
+                android:layout_width="1dip"
+                android:layout_height="70dip"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/cancelcall"
+                android:layout_weight="1"
+                android:textOff="@string/string_hold"
+                android:textOn="@string/string_hold" >
+            </ToggleButton>
+
+            <ToggleButton
+                android:id="@+id/speakerButton"
+                style="@style/CallButton"
+                android:layout_width="1dip"
+                android:layout_height="70dip"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/holdcall"
+                android:layout_weight="1"
+                android:textOff="@string/string_speaker_off"
+                android:textOn="@string/string_speaker_on" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ricvbuttonlayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="10px"
+            android:layout_below="@id/justbottomButtonsContainer" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ricvbuttonlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ricvbuttonlayout1"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/ricvcall"
+                style="@style/CallButton"
+                android:layout_width="1dip"
+                android:layout_height="65dip"
+                android:layout_gravity="center"
+                android:layout_margin="2px"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_call_log_header_incoming_call"
+                android:text="Receive" >
+            </Button>
+
+            <Button
+                android:id="@+id/sendVideo"
+                style="@style/CallButton"
+                android:layout_width="1dip"
+                android:layout_height="65dip"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="SendVideo" >
+            </Button>
+
+            <Button
+                android:id="@+id/dialpadButton"
+                style="@style/CallButton"
+                android:layout_width="1dip"
+                android:layout_height="65dip"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_in_call_touch_dialpad"
+                android:text="Dialpad" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
